@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/WebSite/Css/homepage.css" />
+    <link rel="stylesheet" href="/WebSite/Css/layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Anasayfa</title>
+  </head>
+  <body>
+    <div class="allPage">
+      <div class="navbar">
+        <ul class="navItems">
+          <div class="firstItem">
+            <a href="/WebSite/Html/homepage.html"
+              ><li class="navItem">Anasayfa</li></a
+            >
+          </div>
+          <div class="secondItem">
+            <i
+              style="margin-top: 7px; margin-right: -40px"
+              class="bx bxs-user"
+            ></i>
+            <div class="userName"></div>
+            <a id="logButton" href="#"
+              ></a>
+          </div>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="leftPanel">
+          <div class="sidebar showMenu">
+            <ul class="nav-links">
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxs-user"></i>
+                    <span class="link_name">Kullanıcı Bilgi</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="yasListe">
+                    <a href="javascript:createTab('Kullanici/user1','Yaş Dağılımı')"
+                      >Yaş Dağılımı</a
+                    >
+                  </li>
+                  <li id="cinsiyetListe">
+                    <a href="javascript:createTab('Kullanici/user2','Cinsiyet Dağılımı')"
+                      >Cinsiyet Dağılımı</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="active">
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-javascript"></i>
+                    <span class="link_name">JavaScript</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="jsDiziListe">
+                    <a href="javascript:createTab('JavaScript/js1','JavaScript Diziler')">Diziler</a>
+                  </li>
+                  <li id="jsDonguListe">
+                    <a href="javascript:createTab('JavaScript/js2','JavaScript Döngüler')"
+                      >Döngüler</a
+                    >
+                  </li>
+                  <li id="jsFonkListe">
+                    <a href="javascript:createTab('JavaScript/js3','JavaScript Fonksiyonlar')"
+                      >Fonksiyonlar</a
+                    >
+                  </li>
+                  <li id="jsObjListe">
+                    <a href="javascript:createTab('JavaScript/js4','JavaScript Objeler')">Objeler</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-c-plus-plus"></i>
+                    <span class="link_name">C#</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="csDiziListe">
+                    <a href="javascript:createTab('Csharp/cs1','Csharp Diziler')">Diziler</a>
+                  </li>
+                  <li id="csDonguListe">
+                    <a href="javascript:createTab('Csharp/cs2','Csharp Döngüler')">Döngüler</a>
+                  </li>
+                  <li id="csFonkListe">
+                    <a href="javascript:createTab('Csharp/cs3','Csharp Fonksiyonlar')"
+                      >Fonksiyonlar</a
+                    >
+                  </li>
+                  <li id="csObjListe">
+                    <a href="javascript:createTab('Csharp/cs4','Csharp Objeler')">Objeler</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-html5"></i>
+                    <span class="link_name">HTML</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="htmlFormListe">
+                    <a href="javascript:createTab('Html/html1','Html Formlar')">Formlar</a>
+                  </li>
+                  <li id="htmlTabloListe">
+                    <a href="javascript:createTab('Html/html2','Html Tablolar')">Tablolar</a>
+                  </li>
+                  <li id="htmlElemListe">
+                    <a href="javascript:createTab('Html/html3','Html Elementler')">Elementler</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-css3"></i>
+                    <span class="link_name">CSS</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="cssMarginListe">
+                    <a href="javascript:createTab('Css/css1','Css Border')">Border</a>
+                  </li>
+                  <li id="cssBorderListe">
+                    <a href="javascript:createTab('Css/css2','Css Form')">Form</a>
+                  </li>
+                  <li id="cssFormListe">
+                    <a href="javascript:createTab('Css/css3','Css Margin')">Margin</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-postgresql"></i>
+                    <span class="link_name">SQL</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="sqlSelectListe">
+                    <a href="javascript:createTab('Sql/sql1','Sql Select')">Select</a>
+                  </li>
+                  <li id="sqlInsertListe">
+                    <a href="javascript:createTab('Sql/sql2','Sql Insert')">Insert</a>
+                  </li>
+                  <li id="sqlUpdateListe">
+                    <a href="javascript:createTab('Sql/sql3','Sql Update')">Update</a>
+                  </li>
+                  <li id="sqlJoinListe">
+                    <a href="javascript:createTab('Sql/sql4','Sql Join')">Join</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-python"></i>
+                    <span class="link_name">Python</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="pytListListe">
+                    <a href="javascript:createTab('Python/pyt1','Python Listeler')">Listeler</a>
+                  </li>
+                  <li id="pytDonguListe">
+                    <a href="javascript:createTab('Python/pyt2','Python Döngüler')">Döngüler</a>
+                  </li>
+                  <li id="pytDiziListe">
+                    <a href="javascript:createTab('Python/pyt3','Python Diziler')">Diziler</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-jquery"></i>
+                    <span class="link_name">JQuery</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="jqHidListe">
+                    <a href="javascript:createTab('Jquery/jq1','Jquery Add')">Add</a>
+                  </li>
+                  <li id="jqRemListe">
+                    <a href="javascript:createTab('Jquery/jq2','Jquery Remove')">Remove</a>
+                  </li>
+                  <li id="jqAddListe">
+                    <a href="javascript:createTab('Jquery/jq3','Jquery Hide/Show')">Hide/Show</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class="bx bxl-react"></i>
+                    <span class="link_name">React</span>
+                  </a>
+                  <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li id="reacJsxListe">
+                    <a href="javascript:createTab('React/react1','React JSX')">JSX</a>
+                  </li>
+                  <li id="reacCompListe">
+                    <a href="javascript:createTab('React/react2','React Components')"
+                      >Components</a
+                    >
+                  </li>
+                  <li id="reacPropListe">
+                    <a href="javascript:createTab('React/react3','React Props')">Props</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="footer">Designed by <strong>Ali Boztepe</strong> &copy;</div>
+          </div>
+        </div>
+        <div class="rightPanel">
+          <div id="homePage" style="display: block">
+            <div class="rightPanelContainer">
+              <div id="home">
+                <img src="/WebSite/Assets/homepage.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="rightPanelContent">
+            
+          </div>
+          <div class="rightPanelTab">
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/WebSite/JavaScript/homepage.js"></script>
+  </body>
+</html>

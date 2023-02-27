@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/WebSite/Css/login.css" />
+    <title>Giriş Ekranı</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form id="signupForm">
+          <h1>Hesap Oluştur</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Veya E-mail adresini kullan</span>
+          <input id="signName" name="Name" type="text" placeholder="Adınız" />
+          <input id="signAge" name="Age" type="text" placeholder="Yaşınız" />
+          <input id="signEmail" name="Email" type="email" placeholder="E-mail" />
+          <input id="signPassword" name="Password" type="password" placeholder="Şifre" />
+          <select id="signGender" name="Gender">
+            <option value="Kadın">Kadın</option>
+            <option value="Erkek">Erkek</option>
+          </select>
+          <button>Kayıt Ol</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="/WebSite/Html/homepage.html" id="loginForm">
+          <h1>Giriş Yap</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span id="degisken" >Veya hesabını kullan</span>
+          <input id="loginEmail" type="email" placeholder="E-mail" />
+          <input id="loginPassword" type="password" placeholder="Şifre" />
+          <a href="#">Şifreni mi Unuttun?</a>
+          <button>Giriş Yap</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Tekrar Hoşgeldin!</h1>
+            <p>
+                Bizimle bağlantıda kalmak için lütfen kişisel bilgilerinizle giriş yapın.
+            </p>
+            <button class="ghost" id="signIn">Giriş yap</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Merhaba, Arkadaş!</h1>
+            <p>Kişisel bilgilerinizi girin ve bizimle yolculuğa başlayın.</p>
+            <button class="ghost" id="signUp">Kayıt ol</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/WebSite/JavaScript/login.js"></script>
+  </body>
+</html>

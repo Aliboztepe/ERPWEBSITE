@@ -1,0 +1,69 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="/WebSite/Css/Iframe/ifrlayout.css">
+</head>
+
+<body>
+  <div id="pcinsiyetListe" class="panelItem">
+    <div class="rightPanelHeader">KULLANICI CİNSİYET DAĞILIMI</div>
+    <div
+      class="rightPanelContainer"
+      style="align-items: center; justify-content: center; display: flex"
+    >
+      <canvas
+        id="genderChart"
+        style="width: 100%; max-width: 800px; height: 400px"
+      ></canvas>
+    </div>
+  </div>
+  <script>
+    async function getDatas() {
+      const userApi = "";
+      const result = await fetch(userApi).then((res) => res.json());
+      return result;
+    }
+    async function genderChart() {
+      const prod = await getDatas();
+      const genderObj = {
+        erkek: 0,
+        kadin: 0,
+      };
+      function addGender(param) {
+        for (let item of param) {
+          if (item.gender === "Erkek") {
+            genderObj["erkek"] = (genderObj["erkek"] || 0) + 1;
+          } else {
+            genderObj["kadin"] = (genderObj["kadin"] || 0) + 1;
+          }
+        }
+      }
+      addGender(prod);
+      function drawGenderChart() {
+        var xValues = ["Erkek", "Kadın"];
+        var yValues = [genderObj["erkek"], genderObj["kadin"]];
+        var barColors = ["#1A3E81", "#C39BD3"];
+
+        new Chart("genderChart", {
+          type: "doughnut",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Cinsiyet Dağılımı",
+            },
+          },
+        });
+      }
+      drawGenderChart();
+    }
+    genderChart();
+  </script>
+</body>

@@ -1,0 +1,102 @@
+.rightPanelContainer {
+    width: 100%;
+}
+
+.panelItem {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+}
+
+#home img {
+    width: 700px;
+    height: 400px;
+    border-radius: 20px;
+    opacity: 0.98;
+    margin-top: 35px;
+}
+
+#home img:hover {
+    width: 750px;
+    height: 430px;
+    border-radius: 30px;
+    opacity: 1;
+    transform: rotateX(2px);
+    transition: 1s ease;
+}
+#home img:hover::after {
+    transition: 4s;
+}
+
+.rightPanelTab {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: fixed;
+    width: 81.3%;
+    height: 12%;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(252, 251, 244, 0.596), rgb(249, 253, 255));
+    gap: 10px;
+    overflow: auto;
+    box-shadow: 0px 2px 10px 0 rgb(0 0 0 / 10%);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.underTabItems {
+    background-image: linear-gradient(to right, rgba(252, 251, 244, 0.596), rgb(249, 253, 255));
+    width: 13%;
+    color: black;
+    box-shadow: 0px 2px 10px 0 rgb(0 0 0 / 10%);
+    height: 60px;
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.underTabItems i {
+    color: #1A3E81;
+    font-size: 30px;
+    width: 30%;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.underTabItems i:hover {
+    color: rgb(199, 67, 100);
+}
+
+.iframeItem {
+    height: 440px;
+    width: 100%;
+    border: none;
+}
+
+.tabButtons {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    width: 70%;
+    max-width: 80px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 12px;
+    background-image: conic-gradient(rgb(250, 238, 238), rgb(253, 253, 240), rgb(235, 250, 235), rgb(241, 241, 255), rgb(250, 232, 232));
+    text-shadow: 1px 1px 2px rgb(167, 180, 212);
+}
+
+.tabButtons:hover {
+   transform: scale(1.1);
+   transition: .3s;
+}
