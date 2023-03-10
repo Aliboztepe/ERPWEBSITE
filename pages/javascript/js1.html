@@ -1,0 +1,72 @@
+<head>
+  <link rel="stylesheet" href="/assets/css/ifr-layout.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="/assets/vendors/mdi/css/"
+  />
+</head>
+
+<body>
+  <div id="dynamicMenu" class="panelItem">
+    <div
+      class="rightPanelContainer"
+      style="align-items: center; justify-content: center; display: flex"
+    >
+    
+      <div class="buttons">
+        <button id="newButton" type="submit" class="custom-btn btn">
+          <span>Yeni</span>
+        </button> 
+        <button type="submit" class="custom-btn btn">
+          <i
+            class="bx bxs-edit-alt"
+            style="color: #17202a; margin-right: 3px"
+          ></i
+          ><span>Düzenle</span>
+        </button>
+        <button type="submit" class="custom-btn btn">
+          <i
+            class="bx bxs-message-square-minus"
+            style="color: #5f9da5; margin-right: 3px"
+          ></i
+          ><span>Sil</span>
+        </button>
+        <button type="submit" class="custom-btn btn">
+          <i class="bx bxl-xing" style="color: #1b4f72; margin-right: 3px"></i
+          ><span>İncele</span>
+        </button>
+        <button type="submit" class="custom-btn btn">
+          <i
+            class="bx bxs-copy-alt"
+            style="color: #4a235a; margin-right: 3px"
+          ></i
+          ><span>Kopya</span>
+        </button>
+        <button type="submit" class="custom-btn btn">
+          <i
+            class="bx bx-search-alt"
+            style="color: #641e16; margin-right: 3px"
+          ></i
+          ><span>Ara</span>
+        </button>
+      </div>
+      <div class="contentIfr">
+        <div class="newContent" style="display: none">
+          <form id="newForm">
+            <label for="newSelect">Hangi Menüye Eklemek İstiyorsunuz</label>
+            <select name="newOptions" id="newSelect"></select>
+            <label for="newInput">Kategori başlığı ne olsun?</label>
+            <input type="text" id="newInput" />
+
+            <button type="submit" class="submitButton">Ekle</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/js/ifr.js"></script>
+</body>

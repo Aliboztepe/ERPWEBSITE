@@ -1,0 +1,109 @@
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="/Css/Iframe/ifrlayout.css">
+  <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+  <div id="pyasListe" class="panelItem">
+    <div
+      class="rightPanelContainer"
+      style="align-items: center; justify-content: center; display: flex"
+    >
+      <canvas id="myChart" style="width: 100%; max-width: 800px"></canvas>
+    </div>
+  </div>
+  <script>
+    async function getDatas() {
+      const userApi = "https://";
+      const result = await fetch(userApi).then((res) => res.json());
+      return result;
+    }
+    async function ageChart() {
+      const products = await getDatas();
+      const ageObj = {
+        "0-20": 0,
+        "21-25": 0,
+        "26-30": 0,
+        "31-35": 0,
+        "36-40": 0,
+        "41-50": 0,
+        "50+": 0,
+      };
+      function addAge(param) {
+        for (let item of param) {
+          if (item.age < 21) {
+            ageObj["0-20"] = (ageObj["0-20"] || 0) + 1;
+          } else if (item.age > 20 && item.age < 26) {
+            ageObj["21-25"] = (ageObj["21-25"] || 0) + 1;
+          } else if (item.age > 25 && item.age < 31) {
+            ageObj["26-30"] = (ageObj["26-30"] || 0) + 1;
+          } else if (item.age > 30 && item.age < 36) {
+            ageObj["31-35"] = (ageObj["31-35"] || 0) + 1;
+          } else if (item.age > 35 && item.age < 41) {
+            ageObj["36-40"] = (ageObj["36-40"] || 0) + 1;
+          } else if (item.age > 40 && item.age < 51) {
+            ageObj["41-50"] = (ageObj["41-50"] || 0) + 1;
+          } else {
+            ageObj["50+"] = (ageObj["50+"] || 0) + 1;
+          }
+        }
+      }
+      addAge(products);
+      function drawAgeChart() {
+        var xValues = [
+          "0-20",
+          "21-25",
+          "26-30",
+          "31-35",
+          "36-40",
+          "41-50",
+          "50+",
+        ];
+        var yValues = [
+          ageObj["0-20"],
+          ageObj["21-25"],
+          ageObj["26-30"],
+          ageObj["31-35"],
+          ageObj["36-40"],
+          ageObj["41-50"],
+          ageObj["50+"],
+        ];
+        var barColors = [
+          "#283747",
+          "#616A6B",
+          "#717D7E",
+          "#909497",
+          "#B3B6B7",
+          "#D5DBDB",
+          "#D5DBDB",
+        ];
+
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "Kullanıcı Yaş Dağılımı",
+            },
+          },
+        });
+      }
+      drawAgeChart();
+    }
+    ageChart();
+  </script>
+</body>
